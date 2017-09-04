@@ -1,0 +1,40 @@
+﻿Author: Björn Frohberg
+Datum: 2017-09-04 17:55
+
+tsconfig.json wurde erstellt
+
+1. Projekt > Rechtsklick > TypeScript Konfigurationsdatei
+
+2. Der Inhalt wurde überschrieben mit
+
+Nicht löschen!!!
+
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2015", "dom"],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  }
+}
+
+3. Der Inhalt wird kompiliert per PowerShell oder CMD aus dem Projektordner heraus,
+a) nachdem package.json Restore ist
+b) nachdem ein Ordner "app" erstellt ist. Darin ist eine TypeScript-Datei, die kompiliert werden soll
+
+4. Kompilieren (Einmal)
+cd node_modules\.bin
+Ausführen von tsc.cmd (nur einmal)
+
+Im Ordner "app" werden 2 Dateien erstellt, die Standardgemäß verborgen sind in Visual Studio
+
+YouTube Video Minute 17:46
+
+5. Ab sofort wird dieser Schritt automatisch getan sobald das Projekt gebaut wird.
+
+#gulp triggert automatisch
