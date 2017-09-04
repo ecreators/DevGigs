@@ -1,0 +1,41 @@
+﻿Author: Björn Frohberg
+Datum:  2017-09-04 17:31
+
+package.json
+
+package.json > Rechtklick > "Pakete wiederherstellen"
+> stellt "node_modules" wieder her, die in "dependencies" aufgeführt sind
+
+Standard ist 
+
+Folgendes nicht löschen!!!
+
+{
+  "author": "",
+  "name": "dev-gigs",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^4.2.4",
+    "@angular/compiler": "^4.2.4",
+    "@angular/core": "^4.2.4",
+    "@angular/forms": "^4.2.4",
+    "@angular/http": "^4.2.4",
+    "@angular/platform-browser": "^4.2.4",
+    "@angular/platform-browser-dynamic": "^4.2.4",
+    "@angular/router": "^4.2.4",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.4.2",
+    "systemjs": "^0.20.12",
+    "zone.js": "^0.8.14"
+  },
+  "devDependencies": {
+    "@types/node": "~6.0.60",
+    "http-server": "^0.9.0",
+    "typescript": "~2.3.3"
+  },
+  "scripts": {
+    "test": "echo \"No Tests\" && exit 1"
+  }
+}
