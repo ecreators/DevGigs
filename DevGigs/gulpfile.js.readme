@@ -1,5 +1,5 @@
 ﻿Author: Björn Frohberg
-Datum: 2017-09-04 19:06
+Datum: 2017-09-04 19:57
 
 gulpfile.js
 
@@ -24,3 +24,35 @@ Nicht Löschen!!!
 
 1. cd "Projektverzeichnis"
 2. CMD> gulp -> benötigt gulpfile.js
+
+3. Inhalt der gulpfile.js
+
+Nicht Löschen!!!
+
+// package.json/devDependencies
+var gulp = require("gulp");
+var ts = require("gulp-typescript");
+var sourcemaps = require("gulp-sourcemaps");
+
+var tsProject = ts.createProject("tsconfig.json");
+
+// Schritt 1 "default"
+gulp.task("default", function() {
+    // wenn der Code geändert wird, wird er hiermit in "app" vorbereitet
+    return tsProject.src()
+        // Quelldateien holen
+        .pipe(sourcemaps.init())
+        // Kompilieren
+        .pipe(tsProject())
+        // Scripts schreiben
+        .pipe(sourcemaps.write("."))
+        // extrahieren nach "app"
+        .pipe(gulp.dest("app"));
+});
+
+// Schritt 2 "dev", führt "default" (Schritt 1: Kompilieren) aus, wenn sich
+// Änderung im Ordner "app" ergeben an Dateien mit Endung ".ts"
+gulp.task('dev',
+    function() {
+        gulp.watch("app/**/*.ts", ['default']);
+    });

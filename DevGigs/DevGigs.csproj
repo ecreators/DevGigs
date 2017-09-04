@@ -1,5 +1,4 @@
 ﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props" Condition="Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props')" />
   <Import Project="..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props" Condition="Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
@@ -75,6 +74,7 @@
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="tsconfig.json.readme" />
+    <Content Include="README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,10 +91,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\gigsapp.ts" />
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <TypeScriptCompile Include="app\helloworld.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -130,11 +130,8 @@
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
     <Error Condition="!Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.props'))" />
     <Error Condition="!Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.targets'))" />
-    <Error Condition="!Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.props'))" />
-    <Error Condition="!Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.targets'))" />
   </Target>
   <Import Project="..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.targets" Condition="Exists('..\packages\MSBuild.Node.0.5.1\build\MSBuild.Node.targets')" />
-  <Import Project="..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.targets" Condition="Exists('..\packages\MSBuild.Gulp.0.5.1\build\MSBuild.Gulp.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
