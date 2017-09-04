@@ -1,0 +1,41 @@
+﻿Author: Björn Frohberg
+Datum: 2017-09-04 20:21
+
+app.module.ts
+main.ts
+
+Beide Dateien gehören zusammen.
+
+app.module.ts
+Definiert ein Modul für die @Component Klassen, die später verwendet werden sollen.
+
+Nicht löschen!!!
+
+<code>
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { HelloWorldComponent } from './helloworld.component'
+
+@NgModule({
+    imports: [BrowserModule],
+    declarations: [HelloWorldComponent],
+    bootstrap: [HelloWorldComponent]
+})
+export class AppModule {
+    
+}
+</code>
+
+main.ts
+Lädt per bootstrap das Modul "AppModule" (definiert in app.module.ts)
+
+Nicht löschen!!!
+
+<code>
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+</code>

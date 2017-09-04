@@ -9,6 +9,7 @@ tsconfig.json wurde erstellt
 
 Nicht löschen!!!
 
+<code>
 {
   "compilerOptions": {
     "target": "es5",
@@ -22,6 +23,7 @@ Nicht löschen!!!
     "suppressImplicitAnyIndexErrors": true
   }
 }
+</code>
 
 3. Der Inhalt wird kompiliert per PowerShell oder CMD aus dem Projektordner heraus,
 a) nachdem package.json Restore ist

@@ -13,6 +13,7 @@ npm install gulp -g
 
 Nicht Löschen!!!
 
+<code>
 "devDependencies": {
 	
 	// muss nach "@types/node": ... stehen!!
@@ -21,6 +22,7 @@ Nicht Löschen!!!
     "gulp-cli": "^1.3.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-typescript": "^3.1.6"
+</code>
 
 1. cd "Projektverzeichnis"
 2. CMD> gulp -> benötigt gulpfile.js
@@ -29,6 +31,7 @@ Nicht Löschen!!!
 
 Nicht Löschen!!!
 
+<code>
 // package.json/devDependencies
 var gulp = require("gulp");
 var ts = require("gulp-typescript");
@@ -56,3 +59,4 @@ gulp.task('dev',
     function() {
         gulp.watch("app/**/*.ts", ['default']);
     });
+</code>

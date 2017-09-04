@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gulpfile.js.readme" />
+    <Content Include="app\app.module.ts.readme" />
     <None Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
@@ -94,7 +95,9 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\helloworld.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\helloworld.component.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

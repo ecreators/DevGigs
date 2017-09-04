@@ -10,6 +10,7 @@ Standard ist
 
 Folgendes nicht löschen!!!
 
+<code>
 {
   "author": "",
   "name": "dev-gigs",
@@ -39,3 +40,4 @@ Folgendes nicht löschen!!!
     "test": "echo \"No Tests\" && exit 1"
   }
 }
+</code>
